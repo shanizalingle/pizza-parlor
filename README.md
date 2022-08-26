@@ -62,7 +62,17 @@ toppings: array
   0: cheese;
   1: pineapple;
 
-  
+
+Describe PizzaDirectory.prototype.addPizza = function()
+
+Test 1: It will add a new pizza to the pizza directory
+Code: 
+pizzaDirectory.addPizza(pizza);
+Expected Output: 
+pizzas = {
+  Shaniza's order: Pizza (order:"Shaniza's order", size:"small", toppings: "pineapple")
+}
+
 </details>
 
 ## Known Bugs
