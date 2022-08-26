@@ -36,6 +36,15 @@ let pizzaDirectory = new PizzaDirectory();
 Expected Output: 
 pizza = {};
 
+Describe: Pizza();
+
+Test 1: the pizza prototype will have an order property
+Code: 
+let pizzaDirectory = new PizzaDirectory();
+let pizza = new pizza("Shaniza's order");
+Expected Output:
+pizza = {"Shaniza's order"};
+
 </details>
 
 ## Known Bugs
