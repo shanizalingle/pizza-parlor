@@ -14,3 +14,23 @@ PizzaDirectory.prototype.addPizza = function(pizza){
 }
 
 //UI Logic
+let pizzaDirectory = new PizzaDirectory();
+
+function handleSubmission(event){
+  event.preventDefault();
+  const inputtedOrder = document.querySelector("input#order-input").value;
+  const inputtedSize = parseInt(document.querySelector("input[name='size-input']:checked").value);
+  const inputtedToppingsArray = []
+  const inputtedToppings = document.querySelectorAll("input[type=checkbox]:checked");
+  for (let i = 0; i < inputtedToppings.length; i++) {
+    inputtedToppingsArray.push(inputtedToppings[i].value);
+  }
+
+  let pizza = new Pizza(inputtedOrder, inputtedSize, inputtedToppingsArray);
+  pizzaDirectory.addPizza(pizza);
+  console.log(pizzaDirectory.pizzas);
+} 
+
+window.addEventListener("load", function() {
+  this.document.querySelector("form#submit-form").addEventListener("submit", handleSubmission);
+});
