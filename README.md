@@ -53,6 +53,16 @@ let pizza = new pizza("Shaniza's order", "small", "pineapple");
 Expected Output:
 pizza = {order:"Shaniza's order", size:"small", toppings: "pineapple"};
 
+
+Test 3: Toppings should take multiple inputs and create an array
+Code:
+let pizza = new pizza("Shaniza's order", "small", ["cheese", "pineapple"]);
+Expected Ouput:
+toppings: array 
+  0: cheese;
+  1: pineapple;
+
+  
 </details>
 
 ## Known Bugs
