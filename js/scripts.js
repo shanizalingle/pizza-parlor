@@ -8,3 +8,9 @@ function Pizza(order, size, toppings = []){
   this.size = size;
   this.toppings = toppings;
 }
+
+PizzaDirectory.prototype.addPizza = function(pizza){ 
+  this.pizzas[pizza.order] = pizza;
+}
+
+//UI Logic
