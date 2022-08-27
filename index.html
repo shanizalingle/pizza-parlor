@@ -11,77 +11,70 @@
     <h1>Pizza Parlor</h1>
 
     <form id="submit-form">
-      <label for="order-input">Enter Your Order Name:</label>
+      <label for="order-input">\Enter Your Order Name: </label>
       <input name="order-input" id="order-input" type="text">
 
       <p>Create Your Own Pizza!</p>
 
-      <p>Choose a size:</p>
-      <label for="size-input">
-        <input type="radio" name="size-input" value="6">
+      <h2>Choose a size:</h2>
+
+      <label>
+        <input type="radio" name="size-input" value="Mini">
         Mini (6in)
       </label><br>
-
-      <label for="size-input">
-        <input type="radio" name="size-input" value="10">
+      <label>
+        <input type="radio" name="size-input" value="Regular">
         Regular (10in)
       </label><br>
-
-      <label for="size-input">
-        <input type="radio" name="size-input" value="14">
+      <label>
+        <input type="radio" name="size-input" value="Large">
         Large (14in)
       </label><br><br>
 
-      <p>Choose your toppings:</p>
-      <label for="toppings-input">
-        <input type="checkbox" name="toppings-input" value="0">
-        Mozzarella
-      </label><br>
+      <h2>Choose your toppings:</h2>
 
-      <label for="toppings-input">
-        <input type="checkbox" name="toppings-input" value="0">
+      <label>
+        <input type="checkbox" name="toppings-input" value="Tomato Sauce">
         Tomato Sauce
       </label><br>
-
-      <label for="toppings-input">
-        <input type="checkbox" name="toppings-input" value="1">
+      <label>
+        <input type="checkbox" name="toppings-input" value="Mozzarella">
+        Mozzarella
+      </label><br>
+      <label>
+        <input type="checkbox" name="toppings-input" value="Pepperoni">
         Pepperoni
       </label><br>
       <label for="toppings-input">
-        <input type="checkbox" name="toppings-input" value="1">
+        <input type="checkbox" name="toppings-input" value="Sausage">
         Sausage
       </label><br>
-
-      <label for="toppings-input">
-        <input type="checkbox" name="toppings-input" value="0">
+      <label>
+        <input type="checkbox" name="toppings-input" value="Red Onions">
         Red Onions
       </label><br>
-
-      <label for="toppings-input">
-        <input type="checkbox" name="toppings-input" value="0">
+      <label>
+        <input type="checkbox" name="toppings-input" value="Tomatoes">
         Tomatoes
       </label><br>
-
-      <label for="toppings-input">
-        <input type="checkbox" name="toppings-input" value="0">
+      <label>
+        <input type="checkbox" name="toppings-input" value="Green Bell Peppers">
         Green Bell Peppers
       </label><br>
-
-      <label for="toppings-input">
-        <input type="checkbox" name="toppings-input" value="0">
+      <label>
+        <input type="checkbox" name="toppings-input" value="Jalepenos">
         Jalepenos
       </label><br>
-
-      <label for="toppings-input">
-        <input type="checkbox" name="toppings-input" value="0">
-        Ranch
+      <label>
+        <input type="checkbox" name="toppings-input" value="Pineapple">
+        Pineapple
       </label><br><br>
 
       <button type="submit" class="btn btn-light">Review Order</button>
     </form><br>
 
     <div class="hidden" id="totalDiv">
-      <p>Order Total: <span id="totalSpan"></span></p>
+      <h2>Order Total: <span id="totalSpan"></span></h2>
     </div>
   </body>
 </html>

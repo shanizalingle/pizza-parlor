@@ -73,6 +73,14 @@ pizzas = {
   Shaniza's order: Pizza (order:"Shaniza's order", size:"small", toppings: "pineapple")
 }
 
+Describe Pizza.prototype.calculateCost = function()
+
+Test: Cost of pizza will be returned
+Code:
+pizza.calculateCost()
+Expected Ouput:
+cost = $16;
+
 </details>
 
 ## Known Bugs
@@ -81,6 +89,6 @@ pizzas = {
 
 ## License
 
-_(MIT) https://en.wikipedia.org/wiki/MIT_License_
+_[MIT](https://en.wikipedia.org/wiki/MIT_License)_
 
 Copyright (c) _2022_ _Shaniza Lingle_
