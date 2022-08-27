@@ -13,6 +13,13 @@ PizzaDirectory.prototype.addPizza = function(pizza){
   this.pizzas[pizza.order] = pizza;
 }
 
+Pizza.prototype.calculateCost = function(){
+  if (this.size === "Large" && this.toppings.includes("Pepperoni") || this.size === "Large" && this.toppings.includes("Sausage")) {
+    let cost = "$16"
+    return cost;
+  }
+}
+
 //UI Logic
 let pizzaDirectory = new PizzaDirectory();
 
@@ -27,8 +34,9 @@ function handleSubmission(event){
   }
 
   let pizza = new Pizza(inputtedOrder, inputtedSize, inputtedToppingsArray);
+  let cost = pizza.calculateCost();
   pizzaDirectory.addPizza(pizza);
-  console.log(pizzaDirectory.pizzas);
+  document.querySelector(".totalSpan").innerText = cost;
 } 
 
 function resetForm() {
