@@ -16,7 +16,7 @@
 
 ## Description
 
-_Pizza Parlor is a website that will take pizza orders based on size and toppings, and return an amount for the cost of your pizza. This website uses constructors and prototypes, and test-driven development._
+_Portland Pizzeria is a website that will take pizza orders based on size and toppings, and return an amount for the cost of your pizza. This website uses constructors and prototypes, and test-driven development._
 
 ## Setup/Installation Requirements
 * Clone this repository into your desktop_
@@ -53,7 +53,6 @@ let pizza = new pizza("Shaniza's order", "small", "pineapple");
 Expected Output:
 pizza = {order:"Shaniza's order", size:"small", toppings: "pineapple"};
 
-
 Test 3: Toppings should take multiple inputs and create an array
 Code:
 let pizza = new pizza("Shaniza's order", "small", ["cheese", "pineapple"]);
@@ -61,6 +60,13 @@ Expected Ouput:
 toppings: array 
   0: cheese;
   1: pineapple;
+
+Test 4: the pizza protoype will have a phone number property
+Code: 
+let pizzaDirectory = new PizzaDirectory();
+let pizza = new pizza("Shaniza's order", "small", "pineapple", "555 555 5555");
+Expected Output:
+pizza = {order:"Shaniza's order", size:"small", toppings: "pineapple", "555 555 5555"};
 
 
 Describe PizzaDirectory.prototype.addPizza = function()

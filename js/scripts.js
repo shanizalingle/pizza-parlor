@@ -69,15 +69,16 @@ function orderOnline() {
 function resetForm() {
   document.getElementById("order-form").reset();
   document.getElementById("reviewDiv").removeAttribute("class");
-  }
+}
 
-function nextPage() {
-  document.getElementById("review-form").reset();
+function placeOrder() {
+  document.getElementById("placeOrderDiv").removeAttribute("class");
+  document.getElementById("reviewDiv").setAttribute("class");
 }
 
 window.addEventListener("load", function() {
   this.document.querySelector("img#orderImg").addEventListener("click", orderOnline);
   this.document.querySelector("form#order-form").addEventListener("submit", handleSubmission);
   this.document.querySelector("form#order-form").addEventListener("submit", resetForm);
-  this.document.querySelector("form#review-form").addEventListener("submit", nextPage);
+  this.document.querySelector("form#review-form").addEventListener("submit", placeOrder);
 });

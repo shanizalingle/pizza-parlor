@@ -15,8 +15,11 @@
       <div class="container">
         <form id="order-form">
           <h1>Begin Order</h1>
-          <label for="order-input">Enter Your Order Name: </label>
-          <input name="order-input" id="order-input" type="text">
+          <p><em>*Pick up only, delivery not available*</em></p>
+          <label for="order-input">Order Name: </label>
+          <input name="order-input" id="order-input" type="text"><br>
+          <label for="number-input">Phone Number: </label>
+          <input name="number-input" id="number-input" type="number">
            <h2>Choose a size:</h2>
             <label>
               <input type="radio" name="size-input" value="Mini">
@@ -75,16 +78,21 @@
     <div class="container">
       <form id="review-form">
         <h2>Order Review</h2>
-        <p><em>Please confirm that all information is correct before procceding</em></p>
+        <p><em>*Please confirm that all information is correct before procceding*</em></p>
         <p>Order Name: <span class="orderSpan"></span></p>
+        <p>Phone Number: <span class="numberSpan"></span></p>
         <p>Size: <span class="sizeSpan"></span></p>
         <p>Toppings: <span class="toppingsSpan"></span></p>
         <p>Total Cost: <span class="totalSpan"></span></p>
-        <button type="submit" class="btn btn-light">Place Order</button>
+        <button type="submit" class="btn btn-dark">Place Order</button>
       </form>
     </div>
   </div>
   <br><br>
+  <div id="placeOrderDiv" class="hidden">
+    <img id="placeOrderImg" src="img/place-order-ss.png">
+    <br><br>
+  </div>
   <img id="footerImg" src="img/portland-pizzeria-footer.jpg">
   </body>
 </html>
