@@ -18,6 +18,26 @@ Pizza.prototype.calculateCost = function(){
     let cost = "$16"
     return cost;
   }
+  if (this.size === "Regular" && this.toppings.includes("Pepperoni") || this.size === "Regular" && this.toppings.includes("Sausage")) {
+    let cost = "$14"
+    return cost;
+  }
+  if (this.size === "Mini" && this.toppings.includes("Pepperoni") || this.size === "Mini" && this.toppings.includes("Sausage")) {
+    let cost = "$12"
+    return cost;
+  }
+  if (this.size === "Large") {
+    let cost = "$14"
+    return cost;
+  }
+  if (this.size === "Regular") {
+    let cost = "$12"
+    return cost;
+  }
+  if (this.size === "Mini") {
+    let cost = "$10"
+    return cost;
+  }
 }
 
 //UI Logic
@@ -36,14 +56,28 @@ function handleSubmission(event){
   let pizza = new Pizza(inputtedOrder, inputtedSize, inputtedToppingsArray);
   let cost = pizza.calculateCost();
   pizzaDirectory.addPizza(pizza);
+  document.querySelector(".orderSpan").innerText = inputtedOrder;
+  document.querySelector(".sizeSpan").innerText = inputtedSize;
+  document.querySelector(".toppingsSpan").innerText = inputtedToppingsArray.join(", ");;
   document.querySelector(".totalSpan").innerText = cost;
 } 
 
+function orderOnline() {
+  document.getElementById("orderDiv").removeAttribute("class");
+}
+
 function resetForm() {
-  document.getElementById("submit-form").reset();
+  document.getElementById("order-form").reset();
+  document.getElementById("reviewDiv").removeAttribute("class");
   }
 
+function nextPage() {
+  document.getElementById("review-form").reset();
+}
+
 window.addEventListener("load", function() {
-  this.document.querySelector("form#submit-form").addEventListener("submit", handleSubmission);
-  this.document.querySelector("form#submit-form").addEventListener("submit", resetForm);
+  this.document.querySelector("img#orderImg").addEventListener("click", orderOnline);
+  this.document.querySelector("form#order-form").addEventListener("submit", handleSubmission);
+  this.document.querySelector("form#order-form").addEventListener("submit", resetForm);
+  this.document.querySelector("form#review-form").addEventListener("submit", nextPage);
 });

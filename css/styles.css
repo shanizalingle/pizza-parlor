@@ -1,0 +1,21 @@
+img {
+  width: 100%;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  font-family: Courier;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
