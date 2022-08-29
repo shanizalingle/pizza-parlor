@@ -5,7 +5,7 @@
 #### _This website will take pizza orders, you can choose your own size and toppings._
 
 ## GitHub Pages
-
+_https://shanizalingle.github.io/pizza-parlor/_
 
 ## Technologies Used
 
@@ -19,9 +19,10 @@
 _Portland Pizzeria is a website that will take pizza orders based on size and toppings, and return an amount for the cost of your pizza. This website uses constructors and prototypes, and test-driven development._
 
 ## Setup/Installation Requirements
-* Clone this repository into your desktop_
+* _Clone this repository into your desktop_
 * _Navigate to the pizza-parlor directory_
 * _Open index.html_
+* _or open with gh-pages https://shanizalingle.github.io/pizza-parlor/_
 
 ## Tests
 <details>
