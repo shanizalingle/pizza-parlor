@@ -3,8 +3,9 @@ function PizzaDirectory(){
   this.pizzas = {};
 }
 
-function Pizza(order, size, toppings = []){
+function Pizza(order, number, size, toppings = []){
   this.order = order;
+  this.number = number;
   this.size = size;
   this.toppings = toppings;
 }
@@ -46,6 +47,7 @@ let pizzaDirectory = new PizzaDirectory();
 function handleSubmission(event){
   event.preventDefault();
   const inputtedOrder = document.querySelector("input#order-input").value;
+  const inputtedNumber = document.querySelector("input#number-input").value;
   const inputtedSize = document.querySelector("input[name='size-input']:checked").value;
   const inputtedToppingsArray = []
   const inputtedToppings = document.querySelectorAll("input[type=checkbox]:checked");
@@ -53,10 +55,11 @@ function handleSubmission(event){
     inputtedToppingsArray.push(inputtedToppings[i].value);
   }
 
-  let pizza = new Pizza(inputtedOrder, inputtedSize, inputtedToppingsArray);
+  let pizza = new Pizza(inputtedOrder,  inputtedNumber, inputtedSize, inputtedToppingsArray);
   let cost = pizza.calculateCost();
   pizzaDirectory.addPizza(pizza);
   document.querySelector(".orderSpan").innerText = inputtedOrder;
+  document.querySelector(".numberSpan").innerText = inputtedNumber;
   document.querySelector(".sizeSpan").innerText = inputtedSize;
   document.querySelector(".toppingsSpan").innerText = inputtedToppingsArray.join(", ");;
   document.querySelector(".totalSpan").innerText = cost;

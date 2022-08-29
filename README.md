@@ -91,7 +91,7 @@ cost = $16;
 
 ## Known Bugs
 
-* _N/A_
+* _PlaceOrderDiv not displaying on submit_
 
 ## License
 
