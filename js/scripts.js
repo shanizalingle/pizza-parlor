@@ -67,6 +67,7 @@ function handleSubmission(event){
 
 function orderOnline() {
   document.getElementById("orderDiv").removeAttribute("class");
+  document.getElementById("placeOrderDiv").setAttribute("class", "hidden");
 }
 
 function resetForm() {
@@ -76,12 +77,13 @@ function resetForm() {
 
 function placeOrder() {
   document.getElementById("placeOrderDiv").removeAttribute("class");
-  document.getElementById("reviewDiv").setAttribute("class");
+  document.getElementById("reviewDiv").setAttribute("class", "hidden");
+  document.getElementById("orderDiv").setAttribute("class", "hidden");
 }
 
 window.addEventListener("load", function() {
   this.document.querySelector("img#orderImg").addEventListener("click", orderOnline);
   this.document.querySelector("form#order-form").addEventListener("submit", handleSubmission);
   this.document.querySelector("form#order-form").addEventListener("submit", resetForm);
-  this.document.querySelector("form#review-form").addEventListener("submit", placeOrder);
+  this.document.querySelector("form#review-form").addEventListener("click", placeOrder);
 });
